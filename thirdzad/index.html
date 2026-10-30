@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка данных формы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Форма обратной связи</h2>
+        
+        <!-- Блок для вывода общего сообщения об успехе -->
+        <div id="successMessage" class="success-message hidden">Форма успешно отправлена!</div>
+
+        <form id="feedbackForm" novalidate>
+            <!-- Поле Имя -->
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" placeholder="Введите ваше имя">
+                <span class="error-text" id="nameError"></span>
+            </div>
+
+            <!-- Поле Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@mail.com">
+                <span class="error-text" id="emailError"></span>
+            </div>
+
+            <!-- Поле Сообщение -->
+            <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea id="message" rows="5" placeholder="Ваше сообщение (минимум 10 символов)"></textarea>
+                <span class="error-text" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

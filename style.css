@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Корпус калькулятора */
+.calculator {
+    background-color: #f39c12; /* Оранжевый цвет */
+    padding: 30px 25px;
+    border-radius: 40px;
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2), 
+                5px 10px 20px rgba(0,0,0,0.15);
+    width: 320px;
+    border: 4px solid #d35400;
+}
+
+/* Декоративная солнечная панель */
+.solar-panel {
+    width: 100px;
+    height: 25px;
+    background-color: #7f8c8d;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    border: 2px solid #555;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Экран */
+.display {
+    background-color: #d1f2eb; /* Светло-бирюзовый */
+    color: #2c3e50;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 4px solid #a3e4d7;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Сетка кнопок 4х4 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Общие стили для кнопок */
+.btn {
+    background-color: #fef5e7;
+    border: 3px solid #e59866;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5d4037;
+    padding: 15px 0;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px #e59866;
+    transition: all 0.05s ease;
+}
+
+/* Эффект нажатия (для клика мышкой) */
+.btn:active, .btn.active {
+    box-shadow: 0 0px #e59866;
+    transform: translateY(4px);
+}
+
+/* Операторы и специальные кнопки */
+.operator, .equals, .clear {
+    background-color: #fdf2e9;
+}
+
+.clear {
+    color: #c0392b; /* Кнопка Сброса (O) */
+}
